@@ -20,7 +20,8 @@ function App() {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const res = await axios.get("https://news.bklay.xyz/news_feed");
+        const res = await axios.get(import.meta.env.VITE_NEWS_LINK);
+  
         const sortedNews = res.data.news_feed.sort((a, b) => new Date(b.time) - new Date(a.time));
         setNews(sortedNews);
         extractFilterOptions(sortedNews);
