@@ -30,7 +30,7 @@ function App() {
     };
     fetchNews();
   }, []);
-
+  //just where is it going?
   const extractFilterOptions = (newsData) => {
     const options = {
       industry: new Set(),
