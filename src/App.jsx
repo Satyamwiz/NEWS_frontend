@@ -68,7 +68,7 @@ function App() {
     );
   });
 
-  console.log('filteredNews', filteredNews);
+  // console.log('filteredNews', filteredNews);
 
   const handleFilterChange = (e) => {
     setFilters({ ...filters, [e.target.name]: e.target.value });

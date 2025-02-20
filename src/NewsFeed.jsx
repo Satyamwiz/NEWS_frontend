@@ -44,6 +44,15 @@ const NewsFeed = ({ filteredNews }) => {
                 {item.news.event && (
                   <p><strong className='text-primary-accent'>Event:</strong> {item.news.event}</p>
                 )}
+                <p className="text-sm text-gray-500">
+  {new Date(item.time).toLocaleString("en-IN", {
+    timeZone: "Asia/Kolkata",
+    hour12: true,
+    hour: "2-digit",
+    minute: "2-digit",
+  })}
+</p>
+
               </div>
             </motion.div>
           ))}
